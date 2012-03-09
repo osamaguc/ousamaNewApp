@@ -1,72 +1,68 @@
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
-        <title>
-        </title>
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
-		<link rel="stylesheet" href="ousama.min.css" />
-        <style>
-            /* App custom styles */
-        </style>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js">
-        </script>
-        <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js">
-        </script>
-    </head>
-    <body>
-        <div data-role="page" id="page1">
-            <div data-role="content">
-                <a data-role="button" data-inline="true" data-transition="fade" data-theme="a" href="#page1">
-                    Button
-                </a>
-                <div data-role="fieldcontain">
-                    <label for="selectmenu1">
-                        Choose:
-                    </label>
-                    <select name="selectmenu1" id="selectmenu1">
-                        <option value="option1">
-                            Option 1
-                        </option>
-                    </select>
-                </div>
-                <ul data-role="listview" data-divider-theme="a" data-inset="true">
-                    <li data-theme="c">
-                        <a href="#" data-transition="slide">
-                            Button
-                        </a>
-                    </li>
-                    <li data-theme="c">
-                        <a href="#page1" data-transition="slide">
-                            Button
-                        </a>
-                    </li>
-                    <li data-theme="c">
-                        <a href="#page1" data-transition="slide">
-                            Button
-                        </a>
-                    </li>
-                </ul>
-                <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup" data-type="vertical">
-                        <legend>
-                            Choose:
-                        </legend>
-                        <input name="radiobuttons1" id="radio1" value="" type="radio" />
-                        <label for="radio1">
-                            Option
-                        </label>
-                        <input name="radiobuttons1" id="radio2" value="radio2" type="radio" />
-                        <label for="radio2">
-                            Option
-                        </label>
-                    </fieldset>
-                </div>
-            </div>
-        </div>
-        <script>
-            //App custom javascript
-        </script>
-    </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Mobile: Theme Download</title>
+<link rel="stylesheet" href="themes/ou.min.css" />
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.0.1/jquery.mobile.structure-1.0.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script
+	src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+</head>
+<body>
+	<div data-role="page" data-theme="a">
+		<div data-role="content">
+			<div data-role="collapsible-set" data-theme="a" data-content-theme="">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>sagel ma3ana</h3>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<label for="textinput1"> Title </label> <input id="textinput1"
+								placeholder="" value="" type="text" />
+						</fieldset>
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<label for="textinput2"> Title </label> <input id="textinput2"
+								placeholder="" value="" type="text" />
+						</fieldset>
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<label for="textinput3"> Title </label> <input id="textinput3"
+								placeholder="" value="" type="text" />
+						</fieldset>
+					</div>
+					<input type="submit" data-theme="a" value="Submit"
+						onclick="ousama()" />
+					<ul data-role="listview" data-divider-theme="a" data-inset="true">
+						<li data-role="list-divider" role="heading">Divider</li>
+						<li data-theme="a"><a href="#" data-transition="slide">
+								Button </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		//App custom javascript
+		//
+		function alertDismissed() {
+			// do something
+		}
+		function ousama() {
+			navigator.notification.alert(
+				    'You are the winner!',  // message
+				    alertDismissed,         // callback
+				    'Game Over',            // title
+				    'Done'                  // buttonName
+				);
+		}
+	</script>
+</body>
 </html>
